@@ -1,4 +1,5 @@
 Themes.register("Billiards", {
+    folder: "billiards",
     setup: () => {
         document.querySelector("#tiles").classList.remove("content-grid");
 
