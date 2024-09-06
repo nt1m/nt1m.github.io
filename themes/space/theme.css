@@ -1,0 +1,87 @@
+:root {
+    --theme-dropdown-background: rgba(0,0,0,0.5);
+    --theme-dropdown-color: white;
+    --theme-dropdown-border: rgba(255,255,255,0.2);
+}
+body {
+    background-color: #01070d;
+    color: rgba(255, 255, 255, 0.426);
+}
+
+@keyframes star-fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    40%, 80% {
+        opacity: var(--star-luminance);
+    }
+}
+star {
+    position: fixed;
+    background-image: radial-gradient(circle, transparent 0, #ffffffc4 0, #ffffff69 70%, transparent 80%);
+    width: var(--star-size);
+    opacity: var(--star-luminance);
+    animation: star-fade var(--star-duration);
+    animation-delay: var(--star-delay);
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    aspect-ratio: 1;
+}
+
+.pillar {
+    position: relative;
+    opacity: 1;
+    transform: 
+        translateY(30px)
+        skewX(-52deg) 
+        skewY(17deg) 
+        scaleX(2.1) 
+        scale(0.7);
+}
+
+.pillar {
+.front-shadow::before,
+.back-shadow::before,
+.front-shadow::after,
+.back-shadow::after {
+    top: 0; left: 0;
+    content: "";
+    position: absolute;
+    width: var(--cell-size);
+    height: var(--cell-size);
+}
+.front-shadow::before {
+    transform: skew(45deg) translateY(100%) translateX(-50%);
+}
+.front-shadow::after {
+    transform: skew(45deg) skewY(-45deg) translateY(100%) translateX(50%);
+}
+.back-shadow::before {
+    transform: skew(45deg) skewY(-45deg) translateX(-50%);
+}
+.back-shadow::after {
+    transform: skew(45deg) translate(50%);
+}
+
+
+
+.platform {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255,255,255,0.25));
+    width: 100%;
+    height: 100%;
+}
+.contents {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1), transparent 80%, transparent);
+    &[data-tooltip]::before {
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+.front-shadow::before,
+.back-shadow::before,
+.front-shadow::after,
+.back-shadow::after {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+}
+
+
+}

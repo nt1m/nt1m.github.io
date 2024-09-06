@@ -1,0 +1,165 @@
+body {
+    color: black;
+    background-color: #fffded;
+    background-image: radial-gradient(white, white 80%, transparent 80%);
+    background-size: 95vh 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    --stop: radial-gradient(white, white 4px, transparent 4px);
+}
+#banner {
+    position: fixed;
+    content: url(./map-banner.png);
+    width: min(200px, 20vw);
+    top: 0;
+    right: 5vw;
+}
+
+#rer-b {
+    position: fixed;
+    left: 50%;
+    background: 
+        var(--stop) 0 calc(100vh - 80px), /* south suburbs */
+        var(--stop) 0 calc(100vh - 80px - 10vh), /* cite-universitaire */
+        var(--stop) 0 calc(100vh - 80px - 20vh), /* denfert-rochereau */
+        var(--stop) 0 calc(100vh - 80px - 30vh), /* luxembourg */
+        var(--stop) 0 calc(100vh - 80px - 40vh), /* st-michel */
+        var(--stop) 0 calc(50vh - 50px), /* Chatelet */
+        var(--stop) 0 calc(25vh), /* Gare du Nord */
+        var(--stop) 0 calc(50px); /* La pleine stade */
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    background-color: #4398d3;
+    border-radius: 20px;
+
+    top: 30px;
+
+    width: 10px;
+    height: calc(100vh - 60px);
+}
+
+#rer-b::before,
+#rer-b::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    display: inline-block;
+    border: 10px solid transparent;
+    
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+}
+
+#rer-b::before {
+    top: -40px;
+    border-bottom-width: 20px;
+    border-bottom-color: #4398d3;
+    filter: drop-shadow(0 16px #4398d3);
+
+}
+
+#rer-b::after {
+    bottom: -40px;
+    border-top-width: 20px;
+    border-top-color: #4398d3;
+    filter: drop-shadow(0 -16px #4398d3);
+}
+
+.seine {
+    position: fixed;
+    background-color: #a9e8fb;
+    height: 20px;
+    transform-origin: 0 0;
+}
+
+#seine-central {
+    top: 50%;
+    width: 40vh;
+    left: calc(50vw - 30vh);
+}
+#seine-right {
+    rotate: 45deg;
+    width: 100vh;
+    left: calc(50vw + 10vh);
+    top: 50%;
+}
+#seine-left-down {
+    rotate: -48deg;
+    translate: -100%;
+    left: calc(50vw - 30vh);
+    top: 50%;
+    width: 40vh;
+
+    transform-origin: 100% 0%;
+}
+#seine-left-up {
+    top: 25vh;
+    width: calc(50vh + calc(20px * abs(cos(-48deg)) + 40vh * abs(sin(-48deg))) - 25vh);
+    
+    rotate: 90deg;
+    transform-origin: 0% 0%;
+
+    left: calc(50vw - 30vh - calc(40vh * abs(cos(-48deg)) + 20px * abs(sin(-48deg))) + 30px);
+}
+#seine-up {
+    rotate: -48deg;
+    top: 25vh;
+    transform-origin: 0% 0%;
+    width: 100vw;
+    left: calc(50vw - 30vh - calc(40vh * abs(cos(-48deg)) + 20px * abs(sin(-48deg))) + 10px)
+}
+
+.contents {
+    --cell-size: 50px;
+}
+
+#airport {
+    font-size: 30px;
+    position: fixed;
+    top: 10px;
+    left: calc(50% + 30px);
+}
+
+#tile-heart {
+    position: fixed;
+    margin-left: 20px;
+    left: 50%;
+    bottom: 10px;
+}
+
+#tile-github {
+    --cell-size: 20px;
+    position: fixed;
+    top: 50vh;
+    left: calc(50vw + 20px);
+    transform: skewX(-5deg)
+}
+
+#tile-paris {
+    --cell-size: 100px;
+    top: calc(50vh);
+    left: calc(50vw - 30vh);
+}
+
+#tile-apple {
+    top: calc(40vh);
+    left: calc(50vw - 30vh);
+}
+
+#tile-8ball {
+    top: calc(100vh - 80px - 15vh);
+    left: calc(50% - 120px);
+}
+
+#tile-work {
+    top: 10vh;
+    left: calc(50% - 60vh);
+}
+
+#soup {
+    position: fixed;
+    left: calc(50% + 12vh);
+    top: calc(100vh - 80px - 10vh);
+    font-size: 30px;
+}

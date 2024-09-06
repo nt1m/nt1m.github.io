@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tim's website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./themes/space/theme.css" id="theme-stylesheet">
+
+</head>
+<body>
+    <main>
+    <div id="theme-content-container"></div>
+
+    <section id="tiles" class="content-grid">
+        <div style="grid-area: 5 / 2" id="tile-heart" class="contents emoji-tile" data-tooltip="my name in 🇻🇳">
+            <a href="https://translate.google.com/?sl=vi&tl=en&text=Tim&op=translate" target="_blank">❤️</a>
+        </div>
+    
+        <div style="grid-area: 2 / 2" id="tile-paris" class="contents" title="yes, in the tower itself" data-tooltip="Grew up here">
+            <a target="_blank"><img src="images/eiffel-tower.png" width="100%" height="100%"></a>
+        </div>
+
+        <div style="grid-area: 2 / 10" id="tile-work" class="contents emoji-tile" title="only quality content" data-tooltip="LinkedIn">
+            <a href="https://www.linkedin.com/in/n-tim/" target="_blank">💼</a>
+        </div>
+
+        <div style="grid-area: 2 / 6" id="tile-8ball" class="contents emoji-tile" data-tooltip="play a game?">
+            <a href="https://calendly.com/ntim/" target="_blank">🎱</a>
+        </div>
+
+        <div style="grid-area: 5 / 6" id="tile-apple" class="contents emoji-tile" data-tooltip="where I work">
+            <a href="https://maps.apple.com/?address=Apple%20Inc.,%201%20Apple%20Park%20Way,%20Cupertino,%20CA%2095014,%20United%20States&auid=559098170073364042&ll=37.334859,-122.009040&lsp=9902&q=Apple%20Park" target="_blank">🍏</a>
+        </div>
+
+        <div style="grid-area: 5 / 10" id="tile-github" class="contents"  title="check out my contribution graph" data-tooltip="Github">
+            <a href="https://github.com/nt1m" id="github-icon" target="_blank">
+                <img src="images/github_octocat.png" width="100%" height="100%">
+                <!-- <svg width="75%" height="75%" viewBox="0 0 67.0892491 80.7393797" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">   
+                    <path d="M23.7352491,5.16237966 C27.717338,4.08504227 31.8240017,3.53699397 35.9492491,3.53237966 C40.0742491,3.53237966 44.2792491,4.10337966 48.1622491,5.16237966 C56.7200891,-0.685140335 60.8961163,-0.0492363355 61.5095105,0.0899324325 L61.5693818,0.104694161 C61.5826491,0.108293265 61.5892491,0.110379665 61.5892491,0.110379665 C64.2592491,6.87337966 62.5592491,11.9263797 62.0742491,13.1483797 C65.2292491,16.5703797 67.0892491,20.9703797 67.0892491,26.3483797 C67.0892491,45.2533797 55.6852491,49.4083797 44.7652491,50.6313797 C46.5452491,52.1793797 48.0812491,55.1123797 48.0812491,59.7573797 C48.0812491,66.0640463 48.0082022,71.1809614 48.0017091,73.044651 L48.0012491,73.2833797 C48.0012491,74.5873797 48.8912491,76.1363797 51.3172491,75.6473797 C68.6478513,69.8264686 64.3687754,78.7519315 44.0859309,80.7328682 C41.5183668,79.0550385 39.7123542,77.7241367 38.6660499,76.7393797 C37.618229,75.7531953 36.5946287,74.4467581 35.5952491,72.8200681 C35.0268944,74.0537472 34.0100196,75.3601843 32.5446246,76.7393797 C31.0792295,78.118575 29.262771,79.4519083 27.0952491,80.7393797 L27.2468353,80.648075 C7.56251072,78.5115236 3.40589811,69.9065806 20.5002491,75.6463797 C22.9272491,76.1363797 23.8162491,74.5873797 23.8162491,73.2843797 C23.8162491,72.1433797 23.7362491,68.2323797 23.7362491,64.1573797 C10.1462491,67.0913797 7.3162491,58.2903797 7.3162491,58.2903797 C5.1322491,52.5863797 1.8962491,51.1203797 1.8962491,51.1203797 C-2.3329968,48.2536584 1.77317251,48.1126721 2.18728731,48.1057383 L2.2202491,48.1053797 C7.1542491,48.4313797 9.7432491,53.1573797 9.7432491,53.1573797 C14.1102491,60.6533797 21.1472491,58.5353797 23.9782491,57.2313797 C24.3822491,54.0533797 25.6772491,51.8533797 27.0522491,50.6313797 C16.2132491,49.4903797 4.8092491,45.2533797 4.8092491,26.3483797 C4.8092491,20.9703797 6.7492491,16.5703797 9.8232491,13.1483797 C9.3382491,11.9263797 7.6392491,6.87337966 10.3092491,0.110379665 C10.3092491,0.110379665 10.3209824,0.106670509 10.3446085,0.10061207 L10.3889872,0.0899324325 C11.0023755,-0.0492363355 15.1783291,-0.685140335 23.7352491,5.16237966 Z" id="Path-3" fill="#000"></path>
+                    <g fill="#fff" fill-opacity="0.3">
+                        <ellipse cx="3.0952491" cy="49.572713" rx="1" ry="1"></ellipse>
+                        <ellipse cx="6.0952491" cy="51.572713" rx="1" ry="1"></ellipse>
+                        <ellipse cx="8.0952491" cy="54.572713" rx="1" ry="1"></ellipse>
+                        <ellipse cx="10.0952491" cy="57.572713" rx="1" ry="1"></ellipse>
+                        <ellipse cx="13.0952491" cy="59.572713" rx="1" ry="1"></ellipse>
+                        <ellipse cx="17.0952491" cy="60.572713" rx="1" ry="1"></ellipse>
+                        <ellipse cx="21.0952491" cy="60.572713" rx="1" ry="1"></ellipse>
+                    </g>
+                </svg> -->
+            </a>
+        </div>
+    </main>
+
+    <div id="cursor"></div>
+
+        <div id="theme-selector">
+            <button>&#x1f58c; Theme</button>
+            <dialog id="theme-dropdown">
+                <ul id="theme-dropdown-list">
+                    
+                </ul>
+            </dialog>
+        </div>
+
+    <script src="themes.js"></script>
+    <script src="themes/space/theme.js"></script>
+    <script src="themes/billiards/theme.js"></script>
+    <script src="themes/paris-metro-map/theme.js"></script>
+    <script>
+
+
+
+        function onpointermove(event) {
+            document.querySelector("#cursor").style.transform = `translate(${event.pageX}px, ${event.pageY}px)`;
+        }
+
+        document.addEventListener("pointermove", onpointermove);
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+#tree {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+#trunk {
+    width: 50px;
+    height: 60vh;
+    margin-right: 15vw;
+    background-color: rgb(13, 9, 9);
+    transform: skewX(3deg);
+    background-repeat: no-repeat;
+    background-size: 2px 100%;
+    background-position: 20px 0, 35px 0;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.024), black),
+        linear-gradient(rgba(0, 0, 0, 0.024), black);
+    box-shadow: 30px 0 30px 20px rgba(255, 255, 0, 0.01) inset;
+
+    filter: drop-shadow(black 0 2px 2px 20px);
+}
+#sand {
+    position: fixed;
+    bottom: 0;
+    height: max(100px, 30vh);
+    width: 100%;
+    background-color: var(--sand-color);
+
+    mask-image: url(./beach.svg);
+    mask-size: 100vw 80%;
+    mask-repeat: no-repeat;
+    mask-position: bottom;
+    mask-mode: alpha;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+#panel {
+    background-color: color-mix(in srgb, white, black 20%);
+    border-radius: 5px;
+    border: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+    color: black;
+    font-family: overpass;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-box-trim: both;
+    text-box-edge: cap alphabetic;
+}

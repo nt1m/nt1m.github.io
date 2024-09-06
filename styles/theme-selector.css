@@ -1,0 +1,47 @@
+#theme-selector {
+    position: fixed;
+    z-index: 99;
+    margin: 20px;
+    > button {
+        background: none;
+        color: inherit;
+        font: inherit;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+#theme-dropdown {
+    margin-top: 20px;
+    color: var(--theme-dropdown-color);
+    background-color: var(--theme-dropdown-background, white);
+    border-radius: 4px;
+    transition: all 0.5s;
+    border: 2px solid var(--theme-dropdown-border, color-mix(in srgb, currentColor 10%, transparent));
+    padding: 0;
+    backdrop-filter: blur(5px);
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        min-width: 300px;
+    }
+    ul label {
+        display: flex;
+        padding: 20px;
+        transition: all 0.3s;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+            background: color-mix(in srgb, currentColor 5%, transparent);
+        }
+        input {
+            margin-inline-end: 20px;
+        }
+    }
+    @starting-style {
+        opacity: 0;
+        translate: 0 -20px;
+    }
+}

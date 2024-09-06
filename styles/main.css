@@ -1,0 +1,110 @@
+@import url(./theme-selector.css);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+:root {
+    -webkit-user-select: none;
+    user-select: none;
+    font-family: Inconsolata;
+}
+body {
+    transition: background-color .8s, color .8s;
+}
+
+::view-transition-group(*) {
+    animation-duration: .5s;
+}
+
+#about {
+    border-radius: 20px;
+    border:none;
+    width: 500px;
+    background-color: #00000022;
+    color: white;
+    transition: all 0.5s;
+    @starting-style {
+        translate: 0 -100vw;
+    }
+}
+
+
+#about::backdrop {
+    pointer-events: none;
+}
+
+body {
+    margin: 0;
+    padding:0;
+    height: 100vh;
+}
+
+#cursor {
+    position: fixed;
+    box-shadow: hsla(50, 84%, 66%, 0.5) 2px 2px 100px 20px;
+    border-radius: 100%;
+    pointer-events: none;
+}
+
+.content-grid {
+    --num-columns: 11;
+    --num-rows: 6;
+    --cell-size: 100px;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    display: grid;
+    width: calc(var(--num-columns) * var(--cell-size));
+    height: calc(var(--num-rows) * var(--cell-size));
+    grid-template-columns: repeat(var(--num-columns), var(--cell-size));
+    grid-template-rows: repeat(var(--num-rows), var(--cell-size));
+}
+@media screen and (max-width: 1000px) {
+    .content-grid {
+        --cell-size: 70px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .content-grid {
+        --cell-size: 70px;
+        rotate: 90deg;
+        transform: translateY(calc(1.5 * var(--cell-size)));
+    }
+    .content-grid > * {
+        rotate: -90deg;
+    }
+}
+
+.contents {
+    position: absolute;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    z-index: 9;
+    text-align: center;
+    align-content: center;
+}
+
+.contents[data-tooltip]::before {
+    content: attr(data-tooltip);
+    font-size: 16px;
+    position: absolute;
+    opacity: 0;
+    transition: all .5s;
+    width: calc(var(--cell-size) * 1.5);
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    text-align: center;
+}
+
+.contents[data-tooltip]:hover::before {
+    opacity: 1;
+    translate: 0 -100%;
+}
+
+.emoji-tile {
+    font-size: calc(var(--cell-size) * 0.6);
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
