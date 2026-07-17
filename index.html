@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1">
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./themes/space/theme.css" id="theme-stylesheet">
-
+    <link rel="stylesheet" id="theme-stylesheet">
 </head>
 <body>
     <main>
@@ -68,9 +67,6 @@
     <script src="themes/billiards/theme.js"></script>
     <script src="themes/paris-metro-map/theme.js"></script>
     <script>
-
-
-
         function onpointermove(event) {
             document.querySelector("#cursor").style.transform = `translate(${event.pageX}px, ${event.pageY}px)`;
         }

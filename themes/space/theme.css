@@ -40,48 +40,43 @@ star {
 }
 
 .pillar {
-.front-shadow::before,
-.back-shadow::before,
-.front-shadow::after,
-.back-shadow::after {
-    top: 0; left: 0;
-    content: "";
-    position: absolute;
-    width: var(--cell-size);
-    height: var(--cell-size);
-}
-.front-shadow::before {
-    transform: skew(45deg) translateY(100%) translateX(-50%);
-}
-.front-shadow::after {
-    transform: skew(45deg) skewY(-45deg) translateY(100%) translateX(50%);
-}
-.back-shadow::before {
-    transform: skew(45deg) skewY(-45deg) translateX(-50%);
-}
-.back-shadow::after {
-    transform: skew(45deg) translate(50%);
-}
-
-
-
-.platform {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255,255,255,0.25));
-    width: 100%;
-    height: 100%;
-}
-.contents {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.1), transparent 80%, transparent);
-    &[data-tooltip]::before {
-        color: rgba(255, 255, 255, 0.8);
+    .front-shadow::before,
+    .back-shadow::before,
+    .front-shadow::after,
+    .back-shadow::after {
+        top: 0; left: 0;
+        content: "";
+        position: absolute;
+        width: var(--cell-size);
+        height: var(--cell-size);
     }
-}
-.front-shadow::before,
-.back-shadow::before,
-.front-shadow::after,
-.back-shadow::after {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-}
-
-
+    .front-shadow::before {
+        transform: skew(45deg) translateY(100%) translateX(-50%);
+    }
+    .front-shadow::after {
+        transform: skew(45deg) skewY(-45deg) translateY(100%) translateX(50%);
+    }
+    .back-shadow::before {
+        transform: skew(45deg) skewY(-45deg) translateX(-50%);
+    }
+    .back-shadow::after {
+        transform: skew(45deg) translate(50%);
+    }
+    .platform {
+        background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255,255,255,0.25));
+        width: 100%;
+        height: 100%;
+    }
+    .contents {
+        background-image: radial-gradient(rgba(255, 255, 255, 0.1), transparent 80%, transparent);
+        &[data-tooltip]::before {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    .front-shadow::before,
+    .back-shadow::before,
+    .front-shadow::after,
+    .back-shadow::after {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    }
 }

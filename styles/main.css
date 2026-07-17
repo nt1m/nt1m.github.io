@@ -9,6 +9,7 @@
 }
 body {
     transition: background-color .8s, color .8s;
+    background-color: #01070d;
 }
 
 ::view-transition-group(*) {
